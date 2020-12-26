@@ -1,0 +1,254 @@
+:root {
+	--dark-gray-blue: hsl(217, 19%, 35%);
+	--desaturated-blue: hsl(214, 17%, 51%);
+	--gray-blue: hsl(212, 23%, 69%);
+	--light-gray-blue: hsl(210, 46%, 95%);
+  }
+  
+/*----------------------------
+	RESET: START
+------------------------------
+https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.css
+/*
+//* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/*----------------------------
+	Attribution in footer
+----------------------------*/
+.attribution {
+  font-size: 0.9375rem;
+  text-align: center;
+	color: hsl(229, 6%, 66%);
+}
+
+.attribution a {
+  color: hsl(229, 6%, 66%);
+}
+
+.attribution a:hover, .attribution a:focus {
+  color: hsl(229, 6%, 66%);
+}
+
+/*----------------------------
+	Page Layout
+----------------------------*/
+
+
+body {
+	font-family: 'Manrope', sans-serif;
+	font-weight: 500;
+	font-size: 13px;
+	background-color: var(--light-gray-blue);
+}
+
+main {
+	border-radius: 2rem;
+	text-align: center;
+	background-color: #fff;
+	margin: 2rem;
+	padding-bottom: 1rem; 
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+	color: var(--dark-gray-blue); 
+	padding-bottom: 2rem;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 2rem;
+	color: var(--desaturated-blue);
+	padding-bottom: 2rem;
+}
+
+.main-pic {
+	border-radius: 2rem 2rem 0 0;
+}
+
+.content-container {
+	padding: 3rem 3rem 0 3rem;
+	text-align: left;
+}
+
+.testimonial__box {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	font-size: 1rem;
+	line-height: 1.2;
+	margin: 0 3rem 1rem 3rem; 
+  }
+
+  .testimonial__box.inactive {
+	display: none
+  }
+  
+  .testimonial__text {
+	display: flex; 
+	flex-direction: column; 
+	align-items: flex-start;
+}
+
+  .testimonial__name {
+	font-size: 0.8rem;
+	letter-spacing: 0.06rem;
+  }
+  
+  .testimonial__date {
+	font-size: 0.8rem;
+	letter-spacing: 0.06rem;
+	opacity: 50%;	
+	padding: 0;
+  }
+  
+  .testimonial__img {
+	flex-shrink: 0;
+	border-radius: 50%;	
+	height: 3em;
+	width: 3em;
+  }
+
+.share-icon {
+	width: 1.4rem;
+	height: 1.4rem;
+	background-color: var(--light-gray-blue);
+	border-radius: 50%;
+	margin-left: auto; 
+}
+
+.share-list__container {
+	display: none; 
+}
+
+.share-list__container.active {
+	display: flex;
+	background: var(--dark-gray-blue);
+	color: var(--gray-blue);
+	letter-spacing: 0.2rem;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1rem;
+	border-radius: 0 0 2rem 2rem;
+}
+
+.share-list {
+	margin: 0 3rem 1rem 3rem; 
+	list-style: none;
+}
+
+.attribution {
+	font-size: 11px; text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media only screen and  (min-width: 475px) {
+	main {
+		display: flex;
+		flex-direction: row;
+		padding: 0;
+	}
+
+	.main-pic {
+		border-radius: 2rem 0 0 2rem;;
+	}
+
+	.content-testimonial-wrapper {
+		margin: 2rem;
+	}
+
+}
