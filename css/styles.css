@@ -213,19 +213,33 @@ p {
 }
 
 .share-list__container.active {
-	display: flex;
+	display: table;
 	background: var(--dark-gray-blue);
 	color: var(--gray-blue);
-	letter-spacing: 0.2rem;
-	justify-content: space-around;
-	align-items: center;
-	margin-bottom: 1rem;
 	border-radius: 0 0 2rem 2rem;
+	margin: 0 auto; 
 }
 
-.share-list {
-	margin: 0 3rem 1rem 3rem; 
+ul {
 	list-style: none;
+	margin: 2rem; 
+}
+
+#share-text {
+	text-transform: uppercase; 
+	letter-spacing: 1rem;
+	font-size: 1rem; 
+}
+
+ul li {
+	display: inline; 
+	float: left; 
+	margin-right: 1rem; 
+	margin-bottom: 2rem; 
+}
+
+ul:last-child {
+	margin-left: auto; 
 }
 
 .attribution {
