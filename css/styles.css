@@ -132,7 +132,6 @@ main {
 	text-align: center;
 	background-color: #fff;
 	margin: 2rem;
-	padding-bottom: 1rem; 
 }
 
 h2 {
@@ -167,8 +166,8 @@ p {
 	gap: 1rem;
 	margin-bottom: 1rem;
 	font-size: 1rem;
-	line-height: 1.2;
-	margin: 0 3rem 1rem 3rem; 
+	line-height: 1.5;
+	margin: 0 3rem 0 3rem; 
   }
 
   .testimonial__box.inactive {
@@ -200,13 +199,16 @@ p {
 	width: 3em;
   }
 
-.share-icon {
+  .share-icon {
 	width: 1.4rem;
 	height: 1.4rem;
 	background-color: var(--light-gray-blue);
 	border-radius: 50%;
 	margin-left: auto; 
-}
+	position: relative;
+    right: 4rem;
+	top: -2.5rem;
+  }
 
 .share-list__container {
 	display: none; 
@@ -217,7 +219,6 @@ p {
 	background: var(--dark-gray-blue);
 	color: var(--gray-blue);
 	border-radius: 0 0 2rem 2rem;
-	margin: 0 auto; 
 }
 
 ul {
@@ -227,8 +228,8 @@ ul {
 
 #share-text {
 	text-transform: uppercase; 
-	letter-spacing: 1rem;
-	font-size: 1rem; 
+	letter-spacing: 0.4rem;
+	font-size: 0.8rem; 
 }
 
 ul li {
@@ -264,5 +265,34 @@ ul:last-child {
 	.content-testimonial-wrapper {
 		margin: 2rem;
 	}
+
+	.share-list__container.active {
+		display: table;
+		position: absolute;
+		background: var(--dark-gray-blue);
+		color: var(--gray-blue);
+		border-radius: 1rem;
+		top: 20rem;
+		right: 0rem;
+	}
+	.arrow-down {
+		width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		
+		border-top: 20px solid #f00;
+	  }
+
+	.share-icon {
+		width: 1.4rem;
+		height: 1.4rem;
+		background-color: var(--light-gray-blue);
+		border-radius: 50%;
+		margin-left: auto; 
+		position: relative;
+		right: 4rem;
+		top: 2.5rem;
+	  }
 
 }
