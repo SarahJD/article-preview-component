@@ -1,9 +1,6 @@
 let shareIcon = document.querySelector('.share-icon');
-//let toggleBox = document.querySelector('.toggle-box');
-
 
 function toggleShare() {
-    //let toggleBox = document.querySelector('.toggle-box');
     let shareList = document.querySelector('.share-list__container');
     let testimonialBox = document.querySelector('.testimonial__box');
     shareList.classList.toggle('active');
@@ -13,19 +10,20 @@ function toggleShare() {
 shareIcon.addEventListener ('click', toggleShare);
 
 
-/*
-function toggleShare() {
-    let shareIcon = document.querySelector('.share-icon');
-    let shareList = document.querySelector('.share-list__container');
-    let testimonialBox = document.querySelector('.testimonial__box');
-    console.log ('here: ' + shareList.style.display);
-    console.log (testimonialBox.style.gap);
-    if (shareList.style.display === "none") {
-        testimonialBox.classList.toggle('inactive');
-        shareList.classList.toggle('active');
-    } else {
-        testimonialBox.classList.toggle('active');
-        shareList.classList.toggle('inactive');
+// media query event handler
+if (matchMedia) {
+    const mq = window.matchMedia("(min-width: 475px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
     }
-  } */
-  
+    
+    // media query change
+    function WidthChange(mq) {
+    if (mq.matches) {
+        let testimonialBox = document.querySelector('.testimonial__box');
+        testimonialBox.classList.toggle('active')
+    } else {
+
+    }
+    
+    }
