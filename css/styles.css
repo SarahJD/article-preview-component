@@ -267,7 +267,18 @@ ul li {
 	main {
 		display: flex;
 		flex-direction: row;
-		padding: 0;
+		max-width: 85rem;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		letter-spacing: 0.1rem;
+		line-height: 1.4;
+	}
+
+	p {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
 	}
 
 	.main-pic {
@@ -278,24 +289,63 @@ ul li {
 		margin: 2rem;
 	}
 
-		.arrow-down {
-		width: 0; 
-		height: 0; 
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		
-		border-top: 20px solid #f00;
-	  }
+	.testimonial__name {
+		font-size: 1.2rem;
+		letter-spacing: 0.06rem;
+		margin-right: 12rem;
+	}
+
+	.testimonial__date {
+		font-size: 1rem;
+	}
+
+	.testimonial__img {
+		flex-shrink: 0;
+		border-radius: 50%;	
+		height: 5em;
+		width: 5em;
+	}
 
 	.share-icon {
-		width: 1.4rem;
-		height: 1.4rem;
-		background-color: var(--light-gray-blue);
+		width: 2rem;
+		height: 2rem;
+		fill: var(--light-gray-blue);
 		border-radius: 50%;
-		margin-left: auto; 
-		position: relative;
-		right: 4rem;
-		top: 2.5rem;
+		z-index: 10;
+		margin-top: 1rem;
+		cursor: pointer;
+	}
+	
+
+	footer {
+		padding: 3rem 3rem 2rem 3rem;
+	}
+
+	.share-list__container {
+		top: -7.8rem; 
+		left: 24rem;
+		bottom: 10rem; 
+		height: 5.3rem;
+		border-radius: 1rem;
+		width: 22rem;
+		padding: 0 2rem;
+	}
+
+	.arrow-down {
+		position: absolute; 
+		top: 5.3rem; 
+		left: 10.5rem;
+		bottom: 10rem; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid var(--dark-gray-blue);
 	  }
 
+	ul {
+		margin: 1.8rem; 
+	}
+	
+	.share-text {
+		font-size: 1.2rem; 
+	}
 }
