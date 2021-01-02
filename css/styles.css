@@ -132,25 +132,30 @@ main {
 	text-align: center;
 	background-color: #fff;
 	margin: 2rem;
+	box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
 }
 
 h2 {
-	font-size: 1.5rem;
-	line-height: 2.3rem;
+	font-size: 1.2rem;
+	line-height: 2rem;
 	color: var(--dark-gray-blue); 
 	padding-bottom: 2rem;
 }
 
 p {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	line-height: 2rem;
 	color: var(--desaturated-blue);
 	padding-bottom: 2rem;
 }
 
-.main-pic {
+.image-container { 
+	background-image: url("../images/drawers.jpg");	
+	width: 100%;
+  	background-size: cover;
+	height: 20rem;
 	border-radius: 1rem 1rem 0 0;
-}
+	}
 
 .content-container {
 	padding: 3rem 3rem 0 3rem;
@@ -188,6 +193,7 @@ footer {
 	font-size: 0.8rem;
 	letter-spacing: 0.06rem;
 	margin-right: 1rem;
+	flex-basis: 100%;
 }
   
 .testimonial__date {
@@ -195,6 +201,7 @@ footer {
 	letter-spacing: 0.06rem;
 	opacity: 50%;	
 	padding: 0;
+	flex-basis: 100%;
 }
   
 .testimonial__img {
@@ -214,6 +221,13 @@ footer {
 	cursor: pointer;
 }
 
+.share-icon:hover {
+	background: var(--gray-blue);
+}
+
+.share-icon:active {
+	transform: scale(0.98);
+}
   
 .share-list__container {
 	display: flex;
@@ -267,43 +281,49 @@ ul li {
 	main {
 		display: flex;
 		flex-direction: row;
-		max-width: 85rem;
+		max-width:100rem;
+	}
+
+	.image-container {
+		flex: 1;
+		width: 105rem; 
+		height: 42rem;
+		border-radius: 1rem 0 0 1rem;
 	}
 
 	h2 {
-		font-size: 1.8rem;
+		font-size: 2.5rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.4;
+		margin-bottom: 0.8rem;
 	}
 
 	p {
-		font-size: 1rem;
-		letter-spacing: 0.1rem;
+		font-size: 1.5rem;
+		line-height: 1.8;
 	}
 
-	.main-pic {
-		border-radius: 1rem 0 0 1rem;;
-	}
-
+	
 	.content-testimonial-wrapper {
-		margin: 2rem;
+		flex: 1.5;
+		margin: 3rem;
 	}
 
 	.testimonial__name {
-		font-size: 1.2rem;
-		letter-spacing: 0.06rem;
-		margin-right: 12rem;
+		font-size: 1.4rem;
+		letter-spacing: 0.1rem;
 	}
 
 	.testimonial__date {
-		font-size: 1rem;
+		font-size: 1.4rem;
+		opacity: 0.3;
 	}
 
 	.testimonial__img {
 		flex-shrink: 0;
 		border-radius: 50%;	
-		height: 5em;
-		width: 5em;
+		height: 6em;
+		width: 6em;
 	}
 
 	.share-icon {
@@ -315,23 +335,24 @@ ul li {
 		margin-top: 1rem;
 		cursor: pointer;
 	}
-	
 
 	footer {
-		padding: 3rem 3rem 2rem 3rem;
+		padding: 2rem 3rem 2rem 3rem;
 	}
 
 	.share-list__container {
-		top: -7.8rem; 
-		left: 24rem;
+		top: -4rem; 
+		left: 41rem;
 		bottom: 10rem; 
 		height: 5.3rem;
 		border-radius: 1rem;
 		width: 22rem;
 		padding: 0 2rem;
+		box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.503415);
 	}
 
-	.arrow-down {
+	.share-list__container::after {
+		content: "";
 		position: absolute; 
 		top: 5.3rem; 
 		left: 10.5rem;
